@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="tipBoxJ.css" />
+	<script type="text/javascript" src="tipBoxJ.js"></script>
+		<style type="text/css">
+	html,body{
+		    padding: 0;
+		    height:2000px;
+	}
+	 @keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-webkit-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-moz-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-o-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-ms-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-webkit-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-moz-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-o-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-ms-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+     .fadeOut{
+      animation: fadeOut .5s forwards;
+    }
+    .fadeIn{
+      animation:fadeIn .5s forwards;
+    }
+			.tipBox-box{
+			min-width: 150px;
+		    border: 1px solid rgba(0, 0, 0, 0);
+   			box-shadow:0 10px 5px rgba(0,0,0,.3);
+		}
+		.ui-tipBox{
+    top: 150px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.78);
+    border-radius: 2px;
+   _box-shadow: 0 10px 5px rgba(0,0,0,.3);
+    position: fixed;
+    pointer-events: auto;
+		}
+		.tipBox-box .tipBox-box-padding{
+    padding: 20px 20px 20px 55px;
+    text-align: left;
+		}
+	.tipBox-box .tipBox-box-content{
+		    position: relative;
+		    overflow: hidden;
+		    font-size: 14px;
+		    overflow-x: hidden;
+		    overflow-y: auto;
+		    color:#fff;
+	}	
+	.tipBox-box-content{
+		position: relative;
+	}
+.tipBox-shade{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    filter: alpha(opacity=0.2);
+    background-color: rgb(241, 241, 241);
+    z-index: 100;
+}
+.tipBox-box .tipBox-box-content .tipBox-box-ico {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    _left: -40px;
+    width: 30px;
+    height: 30px;
+}
+.tipBox-box .tipBox-box-ico{
+    vertical-align: top;
+	}
+	.tipBox-box-ico {
+    background: url(icon.png) no-repeat center center;
+    background-color: #fff;
+    border-radius: 50%;
+}
+ .tipBox-box-ico0{
+ 	display: none;
+ }
+ .tipBox-box-ico1 {
+ 	display: inline-block;
+    background-position: -30px 0;
+} 
+ .tipBox-box-ico2 {
+ 	display: inline-block;
+    background-position: -60px 0;
+} 
+ .tipBox-box-ico3{
+ 	display: inline-block;
+    background-position: 0px 0;
+ }
+	</style>
+</head>
+<body>
+ <!--  <div class="tipBox-shade"></div>
+ <div id="tipBoxbody" class="ui-tipBox tipBox-box fadeIn" style="z-index: 1000;top:400px;left:700px">
+ <div class="tipBox-box-content tipBox-box-padding">
+ <i class="tipBox-load-ico"></i></div>
+ </div> -->
+
+  <!-- <div class="tipBox-load-shade">
+  <div class="ui-tipBox-load" style="z-index: 1000; top: 450.5px; left: 933px;">
+  <div  class="tipBox-load-ico"></div></div></div> -->
+	<button class="fff" id='aaa' onclick="test()">Alert</button>
+    <button class="fff" id='aaa' onclick="load()">load</button>
+        <button class="fff" id='aaa' onclick="remove()">remove</button>
+	<script type="text/javascript">
+		function test() {
+
+			/*tipBoxJ.msg({
+        'title':"提交成功",
+        'time':"300000",
+        'icon':1,
+        callBack:function(){
+          alert(111);
+        }}
+      );*/
+      tipBoxJ.msg({title:"上传成功",time:300000});
+    }
+
+    function load() {
+    tipBoxJ.load()
+    }
+function remove() {
+     tipBoxJ.close();
+}
+/*PostbirdAlertBox.prompt({
+    'title': '请输入姓名',
+    'okBtn': '提交',
+    onConfirm: function (data) {
+        console.log("输入框内容是：" + data);
+        alert("输入框内容是：" + data);
+    },
+    onCancel: function (data) {
+        console.log("输入框内容是：" + data);
+        alert("输入框内容是：" + data);
+    },
+});*/
+	</script>
+</body>
+</html>
