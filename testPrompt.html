@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="tipBoxJ.css" />
+</head>
+<style type="text/css">
+.tipBox-prompt{
+     top: 150px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 2px;
+    _box-shadow: 0 10px 5px rgba(0,0,0,.3);
+    position: fixed;
+    pointer-events: auto;
+}
+.tipBoxPrompt_title{
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 80px 0 20px;
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    border-radius: 2px 2px 0 0;
+}
+.tipBoxPrompt_content{
+	padding: 20px;
+}
+.tipBoxPrompt-input{
+	display: block;
+    width: 230px;
+    height: 36px;
+    margin: 0 auto;
+    line-height: 30px;
+    padding-left: 10px;
+    border: 1px solid #e6e6e6;
+    color: #333;
+}
+.tipBoxPrompt_btnBlock{
+	text-align: right;
+    padding: 0 15px 12px;
+    pointer-events: auto;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.tipBoxPrompt-btn{
+	display: inline-block;
+	height: 28px;
+    line-height: 28px;
+    margin: 5px 5px 0;
+    padding: 0 15px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    color: #333;
+    border-radius: 2px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+}
+.tipBoxPrompt-btn1{
+	background: #00aca1;
+	border-color:#00aca1;
+	color: #fff;
+	margin-right: 20px;
+}
+</style>
+<body>
+	<div class="tipBox-shade"></div>
+       <div id="tipBoxbody" class="tipBox-prompt tipBox-box fadeIn" style="z-index: 19891016;top:340.5px;left:755px">
+       	<div class="tipBoxPrompt_title">输入文字并确认</div>
+       	<div class="tipBoxPrompt_content">
+       		<input class="tipBoxPrompt-input" type="text" name="">
+       	</div>
+       	<div class="tipBoxPrompt_btnBlock">
+       		<a class="tipBoxPrompt-btn tipBoxPrompt-btn1" href="#">确定</a><a class="tipBoxPrompt-btn" href="#">取消</a>
+       	</div>
+         </div>
+</body>
+</html>

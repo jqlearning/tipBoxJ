@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootBox 测试</title>
+	<link rel="stylesheet" href="tipBoxJ.css" />
+	<style type="text/css">
+	.tipBootBox{
+		box-shadow: 1px 1px 50px rgba(0,0,0,.3);position: relative;
+	}
+		.tipBootBox_close{
+			    position: absolute;
+			    right: -14px;
+			    top: -14px;
+		}
+		.tipBootBox_close a{
+			display: block;
+		    border: 2px solid #ffffff;
+		    background: #9a9a9a;
+		    border-radius: 50%;
+		    text-decoration: none;
+		    font-size: 18px;
+		    color: #fff;
+		    width: 24px;
+		    height: 24px;
+		    text-align: center;
+		    line-height: 20px;
+		}
+		.tipBootBox_close a:before{
+			content:"x";
+		}
+		.tipBootBox_close a:hover{
+			 background: #00a19a;
+		}
+		.tipBootBoxContent{
+			 padding: 1px;
+		}
+	</style>
+	<script type="text/javascript" src="tipBoxJ.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var str="<div><h1 style=' text-align: center;'>标题一</h1><h2>标题二</h2></div><div>"
+		+"<a href='javascript:;' onclick='save()'>确定</a><a href='javascript:;' onclick='cancle()'>取消</a></div>";
+		tipBoxJ.bootBox({
+			area:['340', '340'],
+			content: str
+		})
+		function save(){
+			tipBoxJ.closeBootBox();//关闭 bootBox
+			//tipBoxJ.msg({title:"正确"});
+		}
+		function cancle(){
+			tipBoxJ.closeBootBox();
+		}
+	</script>
+	<!-- <div class="tipBox-shade"></div>
+	       <div id="tipBoxbody" class="tipBox-prompt tipBox-box fadeIn" style="z-index: 19891016;top:140.5px;left:655px">
+	       	<div class="tipBootBox">
+	       		<div class="tipBootBoxContent">
+	       			
+	       		</div>
+	       		<span class="tipBootBox_close">
+	       			<a href="javascript:;"></a>
+	       		</span>
+	       	</div>
+	    	</div> -->
+</body>
+</html>
